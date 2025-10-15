@@ -1,0 +1,6 @@
+pandas>=1.5
+matplotlib>=3.6
+fredapi>=0.4.4
+requests>=2.28
+python-dateutil>=2.8
+pyyaml>=6.0

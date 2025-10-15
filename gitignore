@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# Data & charts (you may commit processed but ignore raw big files if desired)
+data/raw/
+*.sqlite3
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PyCharm
+.idea/
+
+# Secrets
+secrets.json
