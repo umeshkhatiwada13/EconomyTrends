@@ -2,7 +2,7 @@ name: EconomyTrends - Update Data
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # daily at midnight UTC (adjust if you prefer every 2 days)
+    - cron: "*/5 * * * *"   # daily at midnight UTC
   workflow_dispatch:
 
 permissions:
