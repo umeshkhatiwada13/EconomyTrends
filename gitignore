@@ -15,7 +15,7 @@ data/raw/
 Thumbs.db
 
 # PyCharm
-.idea/
+.idea/*
 
 # Secrets
 secrets.json
