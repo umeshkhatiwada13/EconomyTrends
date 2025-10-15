@@ -8,6 +8,7 @@ venv/
 
 # Data & charts (you may commit processed but ignore raw big files if desired)
 data/raw/
+data/processed/
 *.sqlite3
 
 # OS

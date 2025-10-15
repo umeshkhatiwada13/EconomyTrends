@@ -1,0 +1,6 @@
+indicator,last_date,last_value,prev_value,pct_change
+"CPI (All Items, monthly)",2025-08-01,323.364,322.132,0.3825
+Unemployment Rate (monthly),2025-08-01,4.3,4.2,2.381
+Federal Funds Rate (daily),2025-09-01,4.22,4.33,-2.5404
+Real GDP (quarterly),2025-04-01,30485.729,30042.113,1.4766
+Nonfarm Payrolls (monthly),2025-08-01,159540.0,159518.0,0.0138
