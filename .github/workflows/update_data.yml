@@ -11,26 +11,38 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.10"
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+
       - name: Run fetch script
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        run: python scripts/fetch_data.py
+        run: |
+          python scripts/fetch_data.py
+
       - name: Run insights generator
-        run: python scripts/analyze_summary.py || echo "No insights generated"
+        run: |
+          python scripts/analyze_summary.py || echo "No insights generated"
+
       - name: Commit & push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "Umesh Khatiwada"
+          git config --global user.email "umeshkhatiwada13@gmail.com"
           git add -A
-          git diff --staged --quiet || (git commit -m "Auto-update: refreshed economic data" && git push)
+          git diff --staged --quiet || (
+            git commit -m "Auto-update: refreshed economic data"
+            git push
+          )
